@@ -1,3 +1,6 @@
+using log4net;
+using log4net.Config;
+using log4net.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,9 +20,12 @@ namespace Yit.Admin.Web.Api
 {
     public class Startup
     {
+        public static ILoggerRepository repository { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            repository = LogManager.CreateRepository("NETCoreRepository");// 指定配置文件
+            XmlConfigurator.Configure(repository, new FileInfo(Directory.GetCurrentDirectory() + "/log4net.config"));
         }
 
         public IConfiguration Configuration { get; }

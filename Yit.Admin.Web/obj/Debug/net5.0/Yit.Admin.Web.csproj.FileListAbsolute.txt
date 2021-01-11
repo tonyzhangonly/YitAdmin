@@ -37,3 +37,4 @@ F:\git项目\YitNet5l-master\Yit.Admin.Web\obj\Debug\net5.0\ref\Yit.Admin.Web.dl
 F:\git项目\YitNet5l-master\Yit.Admin.Web\obj\Debug\net5.0\Yit.Admin.Web.pdb
 F:\git项目\YitNet5l-master\Yit.Admin.Web\obj\Debug\net5.0\Yit.Admin.Web.genruntimeconfig.cache
 F:\git项目\YitNet5l-master\Yit.Admin.Web\obj\Debug\net5.0\Yit.Admin.Web.csproj.CopyComplete
+F:\git项目\YitNet5l-master\Yit.Admin.Web\obj\Debug\net5.0\Yit.Admin.Web.csprojAssemblyReference.cache
