@@ -1,0 +1,9 @@
+F:\git项目\YitNet5l-master\Yit.Entity\bin\Debug\netcoreapp3.1\Yit.Entity.deps.json
+F:\git项目\YitNet5l-master\Yit.Entity\bin\Debug\netcoreapp3.1\Yit.Entity.dll
+F:\git项目\YitNet5l-master\Yit.Entity\bin\Debug\netcoreapp3.1\Yit.Entity.pdb
+F:\git项目\YitNet5l-master\Yit.Entity\obj\Debug\netcoreapp3.1\Yit.Entity.csprojAssemblyReference.cache
+F:\git项目\YitNet5l-master\Yit.Entity\obj\Debug\netcoreapp3.1\Yit.Entity.AssemblyInfoInputs.cache
+F:\git项目\YitNet5l-master\Yit.Entity\obj\Debug\netcoreapp3.1\Yit.Entity.AssemblyInfo.cs
+F:\git项目\YitNet5l-master\Yit.Entity\obj\Debug\netcoreapp3.1\Yit.Entity.csproj.CoreCompileInputs.cache
+F:\git项目\YitNet5l-master\Yit.Entity\obj\Debug\netcoreapp3.1\Yit.Entity.dll
+F:\git项目\YitNet5l-master\Yit.Entity\obj\Debug\netcoreapp3.1\Yit.Entity.pdb

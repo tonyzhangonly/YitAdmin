@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Yit.Entity\Yit.Entity.csproj" />
+    <ProjectReference Include="..\Yit.Util\Yit.Util.csproj" />
+  </ItemGroup>
+
 </Project>

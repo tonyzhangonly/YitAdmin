@@ -4,3 +4,14 @@ F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\Yit.Util.AssemblyInfoInpu
 F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\Yit.Util.AssemblyInfo.cs
 F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\Yit.Util.csproj.CoreCompileInputs.cache
 F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Enum.dll
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Util.deps.json
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Util.dll
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\ref\Yit.Util.dll
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Util.pdb
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Enum.pdb
+F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\Yit.Util.csproj.CopyComplete
+F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\Yit.Util.dll
+F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\ref\Yit.Util.dll
+F:\git项目\YitNet5l-master\Yit.Util\obj\Debug\net5.0\Yit.Util.pdb
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Entity.dll
+F:\git项目\YitNet5l-master\Yit.Util\bin\Debug\net5.0\Yit.Entity.pdb

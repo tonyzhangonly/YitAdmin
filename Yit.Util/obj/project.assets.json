@@ -2685,6 +2685,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Yit.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Yit.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Yit.Entity.dll": {}
+        }
+      },
       "Yit.Enum/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -8125,6 +8135,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Yit.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Yit.Entity/Yit.Entity.csproj",
+      "msbuildProject": "../Yit.Entity/Yit.Entity.csproj"
+    },
     "Yit.Enum/1.0.0": {
       "type": "project",
       "path": "../Yit.Enum/Yit.Enum.csproj",
@@ -8142,6 +8157,7 @@
       "Microsoft.Extensions.Hosting >= 5.0.0",
       "NPOI >= 2.5.2",
       "Newtonsoft.Json >= 12.0.3",
+      "Yit.Entity >= 1.0.0",
       "Yit.Enum >= 1.0.0",
       "log4net >= 2.0.12"
     ]
@@ -8173,6 +8189,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "F:\\git项目\\YitNet5l-master\\Yit.Entity\\Yit.Entity.csproj": {
+              "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Entity\\Yit.Entity.csproj"
+            },
             "F:\\git项目\\YitNet5l-master\\Yit.Enum\\Yit.Enum.csproj": {
               "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Enum\\Yit.Enum.csproj"
             }

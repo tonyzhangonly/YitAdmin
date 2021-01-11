@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Yit.Entity;
 using Yit.Util.Extension;
 
 namespace Yit.Util
@@ -12,7 +13,7 @@ namespace Yit.Util
     public class LogHelper
     {
         private static readonly ILog log = LogManager.GetLogger("NETCoreRepository", "logerror");
-
+        private LogFormat mLogFormat = new LogFormat();
         public static void Debug(object msg, Exception ex = null)
         {
             if (ex == null)
@@ -59,6 +60,17 @@ namespace Yit.Util
             {
                 log.Error(msg + GetExceptionMessage(ex));
             }
+        }
+        public void Error(Exception ex, LogMessage msg)
+        {
+            msg.ExceptionSource = ex.Source;
+            msg.Content = ex.InnerException == null ? ex.Message : ex.InnerException.InnerException == null ? ex.InnerException.Message : ex.InnerException.InnerException.Message;
+            msg.ExceptionInfo = ex.Message;
+            msg.ExceptionRemark = ex.StackTrace;
+            msg.OperationTime = DateTime.Now;
+            msg.Class = ex.GetType().Name;
+            string errMsg = mLogFormat.ExceptionFormat(msg);
+            log.Error(errMsg);
         }
 
         public static void Error(Exception ex)

@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Extension\Extension.HttpRequest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Extension\Extension.HttpRequest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
@@ -18,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Yit.Entity\Yit.Entity.csproj" />
     <ProjectReference Include="..\Yit.Enum\Yit.Enum.csproj" />
   </ItemGroup>
 
