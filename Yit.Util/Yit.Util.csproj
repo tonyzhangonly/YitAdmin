@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Extension\Extension.HttpRequest.cs" />
+    <Compile Remove="Extension\Extension - 复制.HttpRequest.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Extension\Extension.HttpRequest.cs" />
+    <None Include="Extension\Extension - 复制.HttpRequest.cs" />
   </ItemGroup>
 
   <ItemGroup>
