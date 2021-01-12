@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Yit.Admin.Web.Api.Extensions;
 
 namespace Yit.Admin.Web.Api
 {
@@ -39,6 +40,7 @@ namespace Yit.Admin.Web.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Yit.Admin.Web.Api", Version = "v1" });
             });
+            services.AddYitServiceProvider(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

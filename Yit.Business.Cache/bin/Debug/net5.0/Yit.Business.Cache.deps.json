@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Yit.Business.Cache/1.0.0": {
+        "runtime": {
+          "Yit.Business.Cache.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Yit.Business.Cache/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

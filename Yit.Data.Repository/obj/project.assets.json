@@ -10161,11 +10161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\git项目\\YitNet5l-master\\YiSha.Data.Repository\\YiSha.Data.Repository.csproj",
-      "projectName": "YiSha.Data.Repository",
-      "projectPath": "F:\\git项目\\YitNet5l-master\\YiSha.Data.Repository\\YiSha.Data.Repository.csproj",
+      "projectUniqueName": "F:\\git项目\\YitNet5l-master\\Yit.Data.Repository\\Yit.Data.Repository.csproj",
+      "projectName": "Yit.Data.Repository",
+      "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Data.Repository\\Yit.Data.Repository.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "F:\\git项目\\YitNet5l-master\\YiSha.Data.Repository\\obj\\",
+      "outputPath": "F:\\git项目\\YitNet5l-master\\Yit.Data.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

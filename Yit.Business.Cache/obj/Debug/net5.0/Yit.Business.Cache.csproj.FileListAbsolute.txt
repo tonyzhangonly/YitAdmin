@@ -1,0 +1,11 @@
+F:\git项目\YitNet5l-master\Yit.Business.Cache\bin\Debug\net5.0\Yit.Business.Cache.deps.json
+F:\git项目\YitNet5l-master\Yit.Business.Cache\bin\Debug\net5.0\Yit.Business.Cache.dll
+F:\git项目\YitNet5l-master\Yit.Business.Cache\bin\Debug\net5.0\ref\Yit.Business.Cache.dll
+F:\git项目\YitNet5l-master\Yit.Business.Cache\bin\Debug\net5.0\Yit.Business.Cache.pdb
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\Yit.Business.Cache.GeneratedMSBuildEditorConfig.editorconfig
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\Yit.Business.Cache.AssemblyInfoInputs.cache
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\Yit.Business.Cache.AssemblyInfo.cs
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\Yit.Business.Cache.csproj.CoreCompileInputs.cache
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\Yit.Business.Cache.dll
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\ref\Yit.Business.Cache.dll
+F:\git项目\YitNet5l-master\Yit.Business.Cache\obj\Debug\net5.0\Yit.Business.Cache.pdb
