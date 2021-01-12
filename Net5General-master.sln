@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Admin.Web", "Yit.Admin.Web\Yit.Admin.Web.csproj", "{F12CDF0F-AF9B-42C0-B6A3-3120AB535CF0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web前端", "Web前端", "{9E689E22-5C12-4C4C-9FA6-6D5D5E199A2B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Web前端", "05 Web前端", "{9E689E22-5C12-4C4C-9FA6-6D5D5E199A2B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Admin.Web.Api", "Yit.Admin.Web.Api\Yit.Admin.Web.Api.csproj", "{A4C7D0E2-437A-4FFD-AE30-3C43C57A4D79}"
 EndProject
@@ -17,7 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Entity实体层", "04 En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Enum", "Yit.Enum\Yit.Enum.csproj", "{8EC8908B-6A9F-424C-99F6-CC51D8801ACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yit.Entity", "Yit.Entity\Yit.Entity.csproj", "{DABC8B4C-068C-4554-8AF6-727A6B6FDD51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Entity", "Yit.Entity\Yit.Entity.csproj", "{DABC8B4C-068C-4554-8AF6-727A6B6FDD51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 DataAccess数据库核心层", "02 DataAccess数据库核心层", "{232A66B2-7620-49E1-8A27-576B2C966D9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Business 业务逻辑层", "03 Business 业务逻辑层", "{1026E7FF-BBF4-42BC-BC7E-6ABA1307F3E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Data.Repository", "Yit.Data.Repository\Yit.Data.Repository.csproj", "{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,10 @@ Global
 		{DABC8B4C-068C-4554-8AF6-727A6B6FDD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DABC8B4C-068C-4554-8AF6-727A6B6FDD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DABC8B4C-068C-4554-8AF6-727A6B6FDD51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +65,7 @@ Global
 		{D8F9B35C-576A-4F81-A6F6-7AF94C16CCEA} = {7B91E57B-B827-47DD-992C-1F4E919AEFC5}
 		{8EC8908B-6A9F-424C-99F6-CC51D8801ACA} = {3813869F-3860-471C-A026-29F5A2758747}
 		{DABC8B4C-068C-4554-8AF6-727A6B6FDD51} = {3813869F-3860-471C-A026-29F5A2758747}
+		{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F} = {232A66B2-7620-49E1-8A27-576B2C966D9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5EB819EF-3C26-401B-8FAE-ECE3FDF631E1}

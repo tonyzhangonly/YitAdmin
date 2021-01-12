@@ -1,7 +1,6 @@
 F:\git项目\YitNet5l-master\Yit.Enum\bin\Debug\netcoreapp3.1\Yit.Enum.deps.json
 F:\git项目\YitNet5l-master\Yit.Enum\bin\Debug\netcoreapp3.1\Yit.Enum.dll
 F:\git项目\YitNet5l-master\Yit.Enum\bin\Debug\netcoreapp3.1\Yit.Enum.pdb
-F:\git项目\YitNet5l-master\Yit.Enum\obj\Debug\netcoreapp3.1\Yit.Enum.csprojAssemblyReference.cache
 F:\git项目\YitNet5l-master\Yit.Enum\obj\Debug\netcoreapp3.1\Yit.Enum.AssemblyInfoInputs.cache
 F:\git项目\YitNet5l-master\Yit.Enum\obj\Debug\netcoreapp3.1\Yit.Enum.AssemblyInfo.cs
 F:\git项目\YitNet5l-master\Yit.Enum\obj\Debug\netcoreapp3.1\Yit.Enum.csproj.CoreCompileInputs.cache
