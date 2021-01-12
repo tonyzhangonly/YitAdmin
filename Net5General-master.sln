@@ -25,11 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Business 业务逻辑层
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Data.Repository", "Yit.Data.Repository\Yit.Data.Repository.csproj", "{3DC53E81-ED1F-4725-AB7A-B2F40D5B6E4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yit.Business", "Yit.Business\Yit.Business.csproj", "{CB94EA43-37B8-4CAB-B8D9-23D71090DD6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Business", "Yit.Business\Yit.Business.csproj", "{CB94EA43-37B8-4CAB-B8D9-23D71090DD6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yit.Service", "Yit.Service\Yit.Service.csproj", "{F30EBA3D-CA7D-4E5E-97A0-490AEAA3688D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Service", "Yit.Service\Yit.Service.csproj", "{F30EBA3D-CA7D-4E5E-97A0-490AEAA3688D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yit.Business.Cache", "Yit.Business.Cache\Yit.Business.Cache.csproj", "{ED5FFF3A-165E-40AF-9BF6-58F6DCC78441}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Business.Cache", "Yit.Business.Cache\Yit.Business.Cache.csproj", "{ED5FFF3A-165E-40AF-9BF6-58F6DCC78441}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
