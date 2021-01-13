@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\git项目\\YitNet5l-master\\Yit.Enum\\Yit.Enum.csproj",
+      "projectUniqueName": "F:\\git项目\\YitNet5-master\\Yit.Enum\\Yit.Enum.csproj",
       "projectName": "Yit.Enum",
-      "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Enum\\Yit.Enum.csproj",
+      "projectPath": "F:\\git项目\\YitNet5-master\\Yit.Enum\\Yit.Enum.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "F:\\git项目\\YitNet5l-master\\Yit.Enum\\obj\\",
+      "outputPath": "F:\\git项目\\YitNet5-master\\Yit.Enum\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1QfsJjO4vs3gKDi321C0QX5yBQu5TlnlZNjhEvCVlF2LzkpUn8zpI4F5nIgx4plveBnF41TNKr8vrF7jTvO3nQ==",
+  "dgSpecHash": "/ik3P6Nq+E7ePF9exVjiELpmExZkt0MUBfzMLzpZ48sFODRhNhXzKdY4JQiervgtBWdiMa655946Hp9cXhaHhA==",
   "success": true,
-  "projectFilePath": "F:\\git项目\\YitNet5l-master\\Yit.Admin.Web.Api\\Yit.Admin.Web.Api.csproj",
+  "projectFilePath": "F:\\git项目\\YitNet5-master\\Yit.Admin.Web.Api\\Yit.Admin.Web.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

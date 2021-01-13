@@ -8168,11 +8168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\git项目\\YitNet5l-master\\Yit.Util\\Yit.Util.csproj",
+      "projectUniqueName": "F:\\git项目\\YitNet5-master\\Yit.Util\\Yit.Util.csproj",
       "projectName": "Yit.Util",
-      "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Util\\Yit.Util.csproj",
+      "projectPath": "F:\\git项目\\YitNet5-master\\Yit.Util\\Yit.Util.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "F:\\git项目\\YitNet5l-master\\Yit.Util\\obj\\",
+      "outputPath": "F:\\git项目\\YitNet5-master\\Yit.Util\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8189,11 +8189,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\git项目\\YitNet5l-master\\Yit.Entity\\Yit.Entity.csproj": {
-              "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Entity\\Yit.Entity.csproj"
+            "F:\\git项目\\YitNet5-master\\Yit.Entity\\Yit.Entity.csproj": {
+              "projectPath": "F:\\git项目\\YitNet5-master\\Yit.Entity\\Yit.Entity.csproj"
             },
-            "F:\\git项目\\YitNet5l-master\\Yit.Enum\\Yit.Enum.csproj": {
-              "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Enum\\Yit.Enum.csproj"
+            "F:\\git项目\\YitNet5-master\\Yit.Enum\\Yit.Enum.csproj": {
+              "projectPath": "F:\\git项目\\YitNet5-master\\Yit.Enum\\Yit.Enum.csproj"
             }
           }
         }

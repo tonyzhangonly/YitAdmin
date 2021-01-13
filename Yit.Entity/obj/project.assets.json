@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\git项目\\YitNet5l-master\\Yit.Entity\\Yit.Entity.csproj",
+      "projectUniqueName": "F:\\git项目\\YitNet5-master\\Yit.Entity\\Yit.Entity.csproj",
       "projectName": "Yit.Entity",
-      "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Entity\\Yit.Entity.csproj",
+      "projectPath": "F:\\git项目\\YitNet5-master\\Yit.Entity\\Yit.Entity.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "F:\\git项目\\YitNet5l-master\\Yit.Entity\\obj\\",
+      "outputPath": "F:\\git项目\\YitNet5-master\\Yit.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

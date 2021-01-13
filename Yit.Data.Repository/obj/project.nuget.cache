@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cu7qQoNtKlsRwbJP5QEZvpfCWKpXSxFi9aFGhkcQTnEJ9cO5qkHzxTIbeKTke2jX/G49HHmEnkfQ7atj54mIgA==",
+  "dgSpecHash": "8sEbN6wZt5im7Qtehkjw7DCug9p6IT7I4lrXe1u1oqyrHxU9zQ7vCG3EiNLQRE3oCB+8TeRWVrTpI7qTpuSd3w==",
   "success": true,
-  "projectFilePath": "F:\\git项目\\YitNet5l-master\\Yit.Data.Repository\\Yit.Data.Repository.csproj",
+  "projectFilePath": "F:\\git项目\\YitNet5-master\\Yit.Data.Repository\\Yit.Data.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

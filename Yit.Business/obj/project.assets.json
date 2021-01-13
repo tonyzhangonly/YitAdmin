@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\git项目\\YitNet5l-master\\Yit.Business\\Yit.Business.csproj",
+      "projectUniqueName": "F:\\git项目\\YitNet5-master\\Yit.Business\\Yit.Business.csproj",
       "projectName": "Yit.Business",
-      "projectPath": "F:\\git项目\\YitNet5l-master\\Yit.Business\\Yit.Business.csproj",
+      "projectPath": "F:\\git项目\\YitNet5-master\\Yit.Business\\Yit.Business.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "F:\\git项目\\YitNet5l-master\\Yit.Business\\obj\\",
+      "outputPath": "F:\\git项目\\YitNet5-master\\Yit.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
