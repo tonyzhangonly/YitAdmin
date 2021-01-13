@@ -52,7 +52,7 @@ namespace Yit.Admin.Web.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Yit.Admin.Web.Api v1"));
             }
-
+            app.AddYitConfigureProvider(env);
             app.UseHttpsRedirection();
 
             app.UseRouting();

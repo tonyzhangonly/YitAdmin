@@ -18,11 +18,6 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         void AddCache();
 
         /// <summary>
-        /// 添加日志
-        /// </summary>
-        void AddLog();
-
-        /// <summary>
         /// 添加AutoMapper自动对象映射组件
         /// </summary>
         void AddAutoMapper();

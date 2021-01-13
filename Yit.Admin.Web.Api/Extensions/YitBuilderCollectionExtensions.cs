@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,6 @@ namespace Yit.Admin.Web.Api.Extensions
             ICoreServiceBuilder serviceBuilder = new YitCoreServiceBuilder(services, configuration);
             serviceBuilder.AddMvcExtensions();
             serviceBuilder.AddCache();
-            serviceBuilder.AddLog();
             serviceBuilder.AddAutoMapper();
             serviceBuilder.AddCors();
             serviceBuilder.AddSwaggerGenerator();
@@ -30,9 +31,15 @@ namespace Yit.Admin.Web.Api.Extensions
         /// </summary>
         /// <param name="services"></param>
         /// <param name="configuration"></param>
-        public static void AddYitConfigureProvider(this IServiceCollection services, IConfiguration configuration)
+        public static void AddYitConfigureProvider(this IApplicationBuilder app, IWebHostEnvironment env)
         {
-
+            ICoreConfigurationBuilder configurationBuilder = new YitCoreConfigureBuilder(app, env);
+            configurationBuilder.UseRazorEngine();
+            configurationBuilder.UseErrorHanle();
+            configurationBuilder.UseSwagger();
+            configurationBuilder.UseAuth();
+            configurationBuilder.UseCors();
+            configurationBuilder.UseOther();
         }
     }
 }
