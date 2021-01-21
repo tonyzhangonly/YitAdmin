@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace YiSha.Cache.Cache.Interface
+namespace Yit.Cache.Cache.Interface
 {
     public interface ICache
     {

@@ -14,10 +14,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using YiSha.Cache.Cache.Interface;
+using Yit.Cache.Cache.Interface;
 using Yit.Util;
 
-namespace YiSha.Cache.Cache.Redis
+namespace Yit.Cache.Cache.Redis
 {
     public class RedisCacheImp : ICache
     {

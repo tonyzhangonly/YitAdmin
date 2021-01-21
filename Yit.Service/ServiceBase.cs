@@ -1,5 +1,5 @@
 ﻿using System;
-using YiSha.Data.Repository;
+using Yit.Data.Repository;
 using SqlSugar;
 
 namespace Yit.Service

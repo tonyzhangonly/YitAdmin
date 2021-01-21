@@ -1,10 +1,10 @@
 ﻿using System;
-using YiSha.Cache.Cache.Interface;
-using YiSha.Cache.Cache.Memory;
-using YiSha.Cache.Cache.Redis;
+using Yit.Cache.Cache.Interface;
+using Yit.Cache.Cache.Memory;
+using Yit.Cache.Cache.Redis;
 using Yit.Util;
 
-namespace YiSha.Cache
+namespace Yit.Cache
 {
     public class CacheFactory
     {

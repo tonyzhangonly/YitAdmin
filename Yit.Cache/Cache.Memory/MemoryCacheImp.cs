@@ -13,11 +13,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using YiSha.Cache.Cache.Interface;
+using Yit.Cache.Cache.Interface;
 using Microsoft.Extensions.DependencyInjection;
 using Yit.Util;
 
-namespace YiSha.Cache.Cache.Memory
+namespace Yit.Cache.Cache.Memory
 {
     public class MemoryCacheImp:ICache
     {

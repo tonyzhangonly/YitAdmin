@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Business.Cache", "Yit.B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cache 数据缓存接口", "Cache 数据缓存接口", "{F9FD7ABF-F9A8-45F6-9C28-F2342B1DBA4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiSha.Cache", "YiSha.Cache\YiSha.Cache.csproj", "{3B401309-BB4E-4B91-B56D-EE0923155D0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yit.Cache", "Yit.Cache\Yit.Cache.csproj", "{3B401309-BB4E-4B91-B56D-EE0923155D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

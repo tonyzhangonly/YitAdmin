@@ -2,7 +2,7 @@
 using System;
 using Yit.Util;
 
-namespace YiSha.Data.Repository
+namespace Yit.Data.Repository
 {
     /// <summary>
     /// SqlSugar仓储
