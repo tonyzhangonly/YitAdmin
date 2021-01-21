@@ -37,9 +37,12 @@ namespace Yit.Admin.Web.Api.CoreBuilder
             _services.AddScoped<IMapper, Mapper>();
         }
 
+        /// <summary>
+        /// 开启MemoryCache缓存
+        /// </summary>
         public void AddCache()
         {
-            throw new NotImplementedException();
+            _services.AddMemoryCache();
         }
 
         public void AddCors()

@@ -23,11 +23,25 @@ namespace Yit.Cache.Cache.Redis
     {
         private IDatabase cache;
         private ConnectionMultiplexer connection;
+        private readonly object lockHelper = new object();
+        private bool isRetrieveOverdue = false;
+        /// <summary>
+        /// 用于保存Redis中滑动过期的key,与时间间隔
+        /// </summary>
+        public static Dictionary<string, TimeSpan?> slidingKey = new Dictionary<string, TimeSpan?>();
 
         public RedisCacheImp()
         {
             connection = ConnectionMultiplexer.Connect(GlobalContextUtil.SystemConfig.RedisConnectionString);
             cache = connection.GetDatabase();
+            if (!isRetrieveOverdue)
+            {
+                isRetrieveOverdue = true;
+                Task.Run(() =>
+                {
+                    RetrieveOverdue();
+                });
+            }
         }
         public bool SetCache<T>(string key, T value, DateTime? expireTime = null)
         {
@@ -38,6 +52,19 @@ namespace Yit.Cache.Cache.Redis
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
                 };
                 string strValue = JsonConvert.SerializeObject(value, jsonOption);
+                return SetCache(key, strValue, expireTime);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex);
+            }
+            return false;
+        }
+
+        public bool SetCache(string key, string strValue, DateTime? expireTime = null)
+        {
+            try
+            {
                 if (string.IsNullOrEmpty(strValue))
                 {
                     return false;
@@ -57,7 +84,6 @@ namespace Yit.Cache.Cache.Redis
             }
             return false;
         }
-
         public bool RemoveCache(string key)
         {
             return cache.KeyDelete(key);
@@ -68,6 +94,7 @@ namespace Yit.Cache.Cache.Redis
             var t = default(T);
             try
             {
+                SlidingIsOverdue(key);
                 var value = cache.StringGet(key);
                 if (string.IsNullOrEmpty(value))
                 {
@@ -80,6 +107,12 @@ namespace Yit.Cache.Cache.Redis
                 LogHelper.Error(ex);
             }
             return t;
+        }
+        public object GetCache(string key)
+        {
+            SlidingIsOverdue(key);
+            var value = cache.StringGet(key);
+            return value;
         }
 
         #region Hash
@@ -103,13 +136,13 @@ namespace Yit.Cache.Cache.Redis
             return count;
         }
 
-        public T GetHashFieldCache<T>(string key, string fieldKey)
+        public T GetHashFieldCache<T>(string key, string fieldKey) where T : class, new()
         {
             var dict = GetHashFieldCache<T>(key, new Dictionary<string, T> { { fieldKey, default(T) } });
             return dict[fieldKey];
         }
 
-        public Dictionary<string, T> GetHashFieldCache<T>(string key, Dictionary<string, T> dict)
+        public Dictionary<string, T> GetHashFieldCache<T>(string key, Dictionary<string, T> dict) where T : class, new()
         {
             foreach (string fieldKey in dict.Keys)
             {
@@ -165,6 +198,97 @@ namespace Yit.Cache.Cache.Redis
                 connection.Close();
             }
             GC.SuppressFinalize(this);
+        }
+
+        public string GetHashFieldCache(string key, string fieldKey)
+        {
+            var dict = GetHashFieldCache(key, new Dictionary<string, string> { { fieldKey, "" } });
+            return dict[fieldKey];
+        }
+
+        public Dictionary<string, string> GetHashFieldCache(string key, Dictionary<string, string> dict)
+        {
+            foreach (string fieldKey in dict.Keys)
+            {
+                string fieldValue = cache.HashGet(key, fieldKey);
+                dict[fieldKey] = fieldValue;
+            }
+            return dict;
+        }
+
+        public bool SetCacheSliding<T>(string key, T value, TimeSpan? expireTime = null)
+        {
+            lock (lockHelper)
+            {
+                slidingKey.Add(key, expireTime);
+            }
+
+            return SetCache(key, value, DateTime.Now + expireTime);
+        }
+
+        public bool SetCacheSliding(string key, string value, TimeSpan? expireTime = null)
+        {
+            lock (lockHelper)
+            {
+                slidingKey.Add(key, expireTime);
+            }
+            return SetCache(key, value, DateTime.Now + expireTime);
+        }
+
+        public bool IsKeyExists(string key)
+        {
+            return cache.KeyExists(key);
+        }
+        /// <summary>
+        /// 滑动是否过期,没过期就更换过期时间
+        /// </summary>
+        /// <returns></returns>
+        private void SlidingIsOverdue(string key)
+        {
+            try
+            {
+                var keyExists = IsKeyExists(key);
+                if (keyExists)
+                {
+                    TimeSpan? timespan = null;//
+                    bool isSliding = false;
+                    lock (lockHelper)
+                    {
+                        if (slidingKey.ContainsKey(key))
+                        {
+                            timespan = slidingKey[key];
+                            isSliding = true;
+                        }
+                    }
+                    if (isSliding)
+                    {
+                        KeyExpire(key, timespan);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Info("相对过期写入错误", ex);
+            }
+
+        }
+        /// <summary>
+        /// 写入过期时间
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="expireTime"></param>
+        /// <returns></returns>
+        private bool KeyExpire(string key, TimeSpan? expireTime = null)
+        {
+            return cache.KeyExpire(key, expireTime);
+        }
+        private async Task RetrieveOverdue()
+        {
+            while (true)
+            {
+
+                await Task.Delay(1000 * 60 * 10);
+            }
         }
     }
 }
