@@ -286,7 +286,23 @@ namespace Yit.Cache.Cache.Redis
         {
             while (true)
             {
-
+                int lengthKey = slidingKey.Count;
+                Dictionary<string, TimeSpan?> dis = JsonConvert.DeserializeObject<Dictionary<string, TimeSpan?>>(JsonConvert.SerializeObject(slidingKey));
+                foreach (var item in dis.Keys)
+                {
+                    if (!IsKeyExists(item))
+                    {
+                        dis.Remove(item);
+                    }
+                }
+                lock (lockHelper)
+                {
+                    for (int i = lengthKey; i < slidingKey.Count; i++)
+                    {
+                        dis.Add(slidingKey.ToList()[i].Key, slidingKey.ToList()[i].Value);
+                    }
+                    slidingKey = dis;
+                }
                 await Task.Delay(1000 * 60 * 10);
             }
         }
