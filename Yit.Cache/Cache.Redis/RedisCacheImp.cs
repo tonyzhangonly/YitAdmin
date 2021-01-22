@@ -268,7 +268,7 @@ namespace Yit.Cache.Cache.Redis
             }
             catch (Exception ex)
             {
-                LogHelper.Info("相对过期写入错误", ex);
+                LogHelper.Info("滑动过期写入错误", ex);
             }
 
         }
@@ -303,7 +303,7 @@ namespace Yit.Cache.Cache.Redis
                     }
                     slidingKey = dis;
                 }
-                await Task.Delay(1000 * 60 * 10);
+                await Task.Delay(1000 * GlobalContextUtil.SystemConfig.JobRedis);
             }
         }
     }

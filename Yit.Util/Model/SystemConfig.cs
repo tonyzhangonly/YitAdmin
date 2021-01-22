@@ -42,6 +42,7 @@ namespace Yit.Util.Model
 
         public string DBProvider { get; set; }
         public string DBConnectionString { get; set; }
+        public int JobRedis { get; set; }
         /// <summary>
         ///  数据库超时间（秒）
         /// </summary>
