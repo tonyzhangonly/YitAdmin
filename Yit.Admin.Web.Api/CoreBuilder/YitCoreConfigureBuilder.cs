@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Yit.Util;
 
 namespace Yit.Admin.Web.Api.CoreBuilder
 {
@@ -20,32 +22,36 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         }
         public void UseAuth()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void UseCors()
         {
             _app.UseCors("myAllowSpecificOrigins");
-        }
-
-        public void UseErrorHanle()
-        {
-            throw new NotImplementedException();
+            _app.UseAuthorization();
+            _app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers().RequireCors("myAllowSpecificOrigins");
+                endpoints.MapControllers();
+            });
         }
 
         public void UseOther()
         {
-            throw new NotImplementedException();
+            GlobalContextUtil.ServiceProvider = _app.ApplicationServices;
         }
 
         public void UseRazorEngine()
         {
-            throw new NotImplementedException();
+            if (_env.IsDevelopment())
+            {
+                _app.UseDeveloperExceptionPage();
+            }
         }
 
         public void UseSwagger()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -12,10 +12,6 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         /// </summary>
         void UseRazorEngine();
 
-        /// <summary>
-        /// 全局错误拦截器配置
-        /// </summary>
-        void UseErrorHanle();
 
         /// <summary>
         /// Swagger配置

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Yit.Admin.Web.Api.Filter;
 using Yit.Admin.Web.Api.MappingLayer;
 using Yit.Util;
 
@@ -36,7 +37,10 @@ namespace Yit.Admin.Web.Api.CoreBuilder
             _services.AddSingleton(config);
             _services.AddScoped<IMapper, Mapper>();
         }
-
+        public void UseErrorHanle()
+        {
+            _services.AddMvc(o => o.Filters.Add(typeof(GlobalExceptions)));
+        }
         /// <summary>
         /// 开启MemoryCache缓存
         /// </summary>
@@ -78,7 +82,19 @@ namespace Yit.Admin.Web.Api.CoreBuilder
 
         public void AddMvcExtensions()
         {
-            throw new NotImplementedException();
+            _services.AddControllers()
+            //原生Json服务中文、变量、注释支持差，这里切换为Newtonsoft提供的Json服务，必须引用Microsoft.AspNetCore.Mvc.NewtonsoftJson，引用Newtonsoft.Json此处无效
+            .AddNewtonsoftJson(options =>
+            {
+              //保持Json属性/变量大小写
+              options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
+              // 忽略循环引用
+              options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+              // 设置时间格式
+              options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+              // 如字段为null值，该字段不会返回到前端
+              // options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore; 
+          });
         }
 
         public void AddSwaggerGenerator()

@@ -35,7 +35,6 @@ namespace Yit.Admin.Web.Api.Extensions
         {
             ICoreConfigurationBuilder configurationBuilder = new YitCoreConfigureBuilder(app, env);
             configurationBuilder.UseRazorEngine();
-            configurationBuilder.UseErrorHanle();
             configurationBuilder.UseSwagger();
             configurationBuilder.UseAuth();
             configurationBuilder.UseCors();

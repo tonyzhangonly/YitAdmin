@@ -18,6 +18,10 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         void AddCache();
 
         /// <summary>
+        /// 全局错误拦截器配置
+        /// </summary>
+        void UseErrorHanle();
+        /// <summary>
         /// 添加AutoMapper自动对象映射组件
         /// </summary>
         void AddAutoMapper();
