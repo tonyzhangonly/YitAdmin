@@ -16,7 +16,7 @@ using System.Linq;
 
 namespace Yit.SignalRChat.Hubs
 {
-    public class ServerHub : Hub,IServerHub
+    public class ServerHub : Hub, IServerHub
     {
         internal static List<UserModel> signalrUser = new List<UserModel>();
         private readonly string lockHelper = string.Empty;
@@ -53,18 +53,31 @@ namespace Yit.SignalRChat.Hubs
         {
             string connecId = Context.ConnectionId;
             UserModel userModel = new UserModel();//通过key查询到用户信息
+            bool isAdd = signalrUser.Where(a => a.SignalRKey == connecId).ToList().Count == 0;
+            UserModel oldUser = new UserModel();
             lock (lockHelper)
             {
                 ///没有用户就添加用户，否则修改用户中绑定值
-                if (signalrUser.Where(a=>a.SignalRKey==connecId).ToList().Count==0)
+                if (isAdd)
                 {
                     userModel.SignalRKey = connecId;
                     signalrUser.Add(userModel);
                 }
                 else
                 {
-                    signalrUser.Where(a => a.SignalRKey == connecId).FirstOrDefault().LoginName = userModel.LoginName;
+                    oldUser = signalrUser.Where(a => a.SignalRKey == connecId).FirstOrDefault();
+                    oldUser.LoginName = userModel.LoginName;
                 }
+            }
+            if (isAdd)
+            {
+                await Groups.AddToGroupAsync(connecId, userModel.GroupName);
+            }
+            else
+            {
+
+                await Groups.RemoveFromGroupAsync(connecId, oldUser.GroupName);
+                await Groups.AddToGroupAsync(connecId, userModel.GroupName);
             }
         }
         /// <summary>
@@ -86,7 +99,7 @@ namespace Yit.SignalRChat.Hubs
             string connecId = Context.ConnectionId;
             lock (lockHelper)
             {
-                if (signalrUser.Where(a => a.SignalRKey == connecId).ToList().Count>0)
+                if (signalrUser.Where(a => a.SignalRKey == connecId).ToList().Count > 0)
                 {
                     UserModel removeUser = signalrUser.Where(a => a.SignalRKey == connecId).FirstOrDefault();
                     signalrUser.Remove(removeUser);

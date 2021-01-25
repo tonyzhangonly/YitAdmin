@@ -56,6 +56,6 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         /// <summary>
         /// 添加IOC容器
         /// </summary>
-        IServiceProvider AddIocContainer();
+        void AddIocContainer();
     }
 }

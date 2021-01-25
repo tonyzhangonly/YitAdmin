@@ -68,17 +68,17 @@ namespace Yit.Admin.Web.Api.CoreBuilder
 
         public void AddHttpContext()
         {
-            throw new NotImplementedException();
+            
         }
 
-        public IServiceProvider AddIocContainer()
+        public void AddIocContainer()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void AddJwtAuth()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void AddMvcExtensions()
@@ -100,7 +100,7 @@ namespace Yit.Admin.Web.Api.CoreBuilder
 
         public void AddSwaggerGenerator()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void SetConfige()
@@ -110,13 +110,17 @@ namespace Yit.Admin.Web.Api.CoreBuilder
 
         public void AddSignalR()
         {
-            _services.AddSignalR(options =>
+            if (GlobalContextUtil.SystemConfig.IsSignalR)
             {
-                //客户端发保持连接请求到服务端最长间隔，默认30秒，改成4分钟，网页需跟着设置connection.keepAliveIntervalInMilliseconds = 12e4;即2分钟
-                options.ClientTimeoutInterval = TimeSpan.FromMinutes(4);
-                //服务端发保持连接请求到客户端间隔，默认15秒，改成2分钟，网页需跟着设置connection.serverTimeoutInMilliseconds = 24e4;即4分钟
-                options.KeepAliveInterval = TimeSpan.FromMinutes(2);
-            });
+                _services.AddSignalR(options =>
+                {
+                    //客户端发保持连接请求到服务端最长间隔，默认30秒，改成4分钟，网页需跟着设置connection.keepAliveIntervalInMilliseconds = 12e4;即2分钟
+                    options.ClientTimeoutInterval = TimeSpan.FromMinutes(4);
+                    //服务端发保持连接请求到客户端间隔，默认15秒，改成2分钟，网页需跟着设置connection.serverTimeoutInMilliseconds = 24e4;即4分钟
+                    options.KeepAliveInterval = TimeSpan.FromMinutes(2);
+                });
+            }
+            
         }
     }
 }

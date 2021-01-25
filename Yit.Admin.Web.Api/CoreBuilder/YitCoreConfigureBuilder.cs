@@ -24,15 +24,18 @@ namespace Yit.Admin.Web.Api.CoreBuilder
 
         public void AddSignalR()
         {
-            _app.UseEndpoints(endpoints =>
+            if (GlobalContextUtil.SystemConfig.IsSignalR)
             {
-                endpoints.MapHub<ServerHub>("/serverHub");
-            });
+                _app.UseEndpoints(endpoints =>
+                {
+                    endpoints.MapHub<ServerHub>("/serverHub");
+                });
+            }
         }
 
         public void UseAuth()
         {
-            
+
         }
 
         public void UseCors()
@@ -63,7 +66,7 @@ namespace Yit.Admin.Web.Api.CoreBuilder
 
         public void UseSwagger()
         {
-            
+
         }
     }
 }
