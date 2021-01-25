@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Util", "Yit.Util\Yit.Ut
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Entity实体层", "04 Entity实体层", "{3813869F-3860-471C-A026-29F5A2758747}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Enum", "Yit.Enum\Yit.Enum.csproj", "{8EC8908B-6A9F-424C-99F6-CC51D8801ACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Enums", "Yit.Enum\Yit.Enums.csproj", "{8EC8908B-6A9F-424C-99F6-CC51D8801ACA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Entity", "Yit.Entity\Yit.Entity.csproj", "{DABC8B4C-068C-4554-8AF6-727A6B6FDD51}"
 EndProject
@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.Cache", "Yit.Cache\Yit.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.SignalRChat", "Yit.SignalRChat\Yit.SignalRChat.csproj", "{DD5B9D8B-2B9B-4ABD-899B-12CC159E8B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yit.RabbitMQClient", "Yit.RabbitMQClient\Yit.RabbitMQClient.csproj", "{4D9F0ABC-8904-4A33-8941-3D6EE05104F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yit.RabbitMQClient", "Yit.RabbitMQClient\Yit.RabbitMQClient.csproj", "{4D9F0ABC-8904-4A33-8941-3D6EE05104F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

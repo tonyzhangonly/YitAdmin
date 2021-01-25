@@ -31,9 +31,9 @@ namespace Yit.Util
 
             // Clean up the bundle to remove the virtual folder that aspnetcore provides.
             List<string> inputFiles = bundle.InputFiles;
-            if (GlobalContext.SystemConfig.Debug)
+            if (GlobalContextUtil.SystemConfig.Debug)
             {
-                inputFiles = inputFiles.Select(file => file.Replace("wwwroot", GlobalContext.SystemConfig.VirtualDirectory.ParseToString())).ToList();
+                inputFiles = inputFiles.Select(file => file.Replace("wwwroot", GlobalContextUtil.SystemConfig.VirtualDirectory.ParseToString())).ToList();
             }
             List<string> outputString = bundlePath.EndsWith(".js") ?
                 inputFiles.Select(inputFile => $"<script src='{inputFile}?v=" + version + "' type='text/javascript' ></script>").ToList() :
@@ -44,11 +44,11 @@ namespace Yit.Util
 
         private static Bundle GetBundle(string configFile, string bundlePath)
         {
-            if (GlobalContext.SystemConfig.Debug)
+            if (GlobalContextUtil.SystemConfig.Debug)
             {
-                if (!string.IsNullOrEmpty(GlobalContext.SystemConfig.VirtualDirectory))
+                if (!string.IsNullOrEmpty(GlobalContextUtil.SystemConfig.VirtualDirectory))
                 {
-                    bundlePath = bundlePath.Replace(GlobalContext.SystemConfig.VirtualDirectory, string.Empty);
+                    bundlePath = bundlePath.Replace(GlobalContextUtil.SystemConfig.VirtualDirectory, string.Empty);
                 }
                 FileInfo file = new FileInfo(configFile);
                 if (!file.Exists)

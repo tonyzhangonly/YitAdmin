@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Yit.Entity\Yit.Entity.csproj" />
-    <ProjectReference Include="..\Yit.Enum\Yit.Enum.csproj" />
+    <ProjectReference Include="..\Yit.Enum\Yit.Enums.csproj" />
   </ItemGroup>
 
 </Project>

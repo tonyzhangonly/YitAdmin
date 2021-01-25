@@ -17,7 +17,7 @@ namespace Yit.Util
     {
         public static HttpContext HttpContext
         {
-            get { return GlobalContext.ServiceProvider?.GetService<IHttpContextAccessor>().HttpContext; }
+            get { return GlobalContextUtil.ServiceProvider?.GetService<IHttpContextAccessor>().HttpContext; }
         }
 
         public static string Ip

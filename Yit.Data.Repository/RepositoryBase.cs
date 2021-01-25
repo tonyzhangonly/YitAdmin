@@ -15,8 +15,8 @@ namespace Yit.Data.Repository
         /// <param name="context"></param>
         public RepositoryBase(ISqlSugarClient context = null) : base(context)//注意这里要有默认值等于null
         {
-            string dbType = GlobalContext.SystemConfig.DBProvider;
-            string dbConnectionString = GlobalContext.SystemConfig.DBConnectionString;
+            string dbType = GlobalContextUtil.SystemConfig.DBProvider;
+            string dbConnectionString = GlobalContextUtil.SystemConfig.DBConnectionString;
             object sugarDbType = null;
             var isSugarDb = Enum.TryParse(typeof(DbType), dbType, out sugarDbType);
             if (!isSugarDb)

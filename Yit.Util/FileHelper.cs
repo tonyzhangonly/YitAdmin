@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Yit.Enum;
 using Yit.Util.Model;
 using Yit.Util.Extension;
+using Yit.Enums;
 
 namespace Yit.Util
 {
@@ -103,7 +103,7 @@ namespace Yit.Util
             string newFileName = SecurityHelper.GetGuid() + fileExtension;
             string dir = "Resource" + Path.DirectorySeparatorChar + dirModule + Path.DirectorySeparatorChar + DateTime.Now.ToString("yyyy-MM-dd").Replace('-', Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
 
-            string absoluteDir = Path.Combine(GlobalContext.HostingEnvironment.ContentRootPath, dir);
+            string absoluteDir = Path.Combine(GlobalContextUtil.HostingEnvironment.ContentRootPath, dir);
             string absoluteFileName = string.Empty;
             if (!Directory.Exists(absoluteDir))
             {
@@ -148,7 +148,7 @@ namespace Yit.Util
                 return obj;
             }
             filePath = "Resource" + Path.DirectorySeparatorChar + dirModule + Path.DirectorySeparatorChar + filePath;
-            string absoluteDir = Path.Combine(GlobalContext.HostingEnvironment.ContentRootPath, filePath);
+            string absoluteDir = Path.Combine(GlobalContextUtil.HostingEnvironment.ContentRootPath, filePath);
             try
             {
                 if (File.Exists(absoluteDir))
@@ -179,7 +179,7 @@ namespace Yit.Util
         public static TData<FileContentResult> DownloadFile(string filePath, int delete)
         {
             TData<FileContentResult> obj = new TData<FileContentResult>();
-            string absoluteFilePath = GlobalContext.HostingEnvironment.ContentRootPath + Path.DirectorySeparatorChar + filePath.Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
+            string absoluteFilePath = GlobalContextUtil.HostingEnvironment.ContentRootPath + Path.DirectorySeparatorChar + filePath.Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
             byte[] fileBytes = File.ReadAllBytes(absoluteFilePath);
             if (delete == 1)
             {

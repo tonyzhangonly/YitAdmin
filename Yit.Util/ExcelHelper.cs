@@ -29,7 +29,7 @@ namespace Yit.Util
         public string ExportToExcel(string sFileName, string sHeaderText, List<T> list, string[] columns)
         {
             sFileName = string.Format("{0}_{1}", SecurityHelper.GetGuid(), sFileName);
-            string sRoot = GlobalContext.HostingEnvironment.ContentRootPath;
+            string sRoot = GlobalContextUtil.HostingEnvironment.ContentRootPath;
             string partDirectory = string.Format("Resource{0}Export{0}Excel", Path.DirectorySeparatorChar);
             string sDirectory = Path.Combine(sRoot, partDirectory);
             string sFilePath = Path.Combine(sDirectory, sFileName);
@@ -226,7 +226,7 @@ namespace Yit.Util
         /// <returns></returns>
         public List<T> ImportFromExcel(string filePath)
         {
-            string absoluteFilePath = GlobalContext.HostingEnvironment.ContentRootPath + filePath.Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
+            string absoluteFilePath = GlobalContextUtil.HostingEnvironment.ContentRootPath + filePath.Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
             List<T> list = new List<T>();
             HSSFWorkbook hssfWorkbook = null;
             XSSFWorkbook xssWorkbook = null;
