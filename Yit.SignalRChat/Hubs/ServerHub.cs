@@ -88,7 +88,9 @@ namespace Yit.SignalRChat.Hubs
             {
                 if (signalrUser.Where(a => a.SignalRKey == connecId).ToList().Count>0)
                 {
-                    signalrUser.Remove(signalrUser.Where(a => a.SignalRKey == connecId).FirstOrDefault());
+                    UserModel removeUser = signalrUser.Where(a => a.SignalRKey == connecId).FirstOrDefault();
+                    signalrUser.Remove(removeUser);
+                    Groups.RemoveFromGroupAsync(connecId, removeUser.GroupName);
                 }
             }
             return base.OnDisconnectedAsync(exception);
@@ -100,9 +102,9 @@ namespace Yit.SignalRChat.Hubs
             await Clients.Client(userModel.SignalRKey).SendAsync("", message);
         }
 
-        public Task SendByAllMessage(string message)
+        public async Task SendByAllMessage(string message)
         {
-            throw new NotImplementedException();
+            await Clients.All.SendAsync("ReceiveAllMessage", message);///接受信息的方法是ReceiveMessage
         }
     }
 }
