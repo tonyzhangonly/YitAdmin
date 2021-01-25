@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Yit.SignalRChat.Hubs;
 using Yit.Util;
 
 namespace Yit.Admin.Web.Api.CoreBuilder
@@ -20,6 +21,15 @@ namespace Yit.Admin.Web.Api.CoreBuilder
             _app = app;
             _env = env;
         }
+
+        public void AddSignalR()
+        {
+            _app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<ServerHub>("/serverHub");
+            });
+        }
+
         public void UseAuth()
         {
             
@@ -35,7 +45,9 @@ namespace Yit.Admin.Web.Api.CoreBuilder
                 endpoints.MapControllers();
             });
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void UseOther()
         {
             GlobalContextUtil.ServiceProvider = _app.ApplicationServices;

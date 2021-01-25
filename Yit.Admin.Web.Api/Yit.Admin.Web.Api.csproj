@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Yit.Entity\Yit.Entity.csproj" />
+    <ProjectReference Include="..\Yit.SignalRChat\Yit.SignalRChat.csproj" />
     <ProjectReference Include="..\Yit.Util\Yit.Util.csproj" />
   </ItemGroup>
 

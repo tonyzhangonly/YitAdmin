@@ -19,6 +19,10 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         void UseSwagger();
 
         /// <summary>
+        /// 是否开启SignalR
+        /// </summary>
+        void AddSignalR();
+        /// <summary>
         /// 认证配置
         /// </summary>
         void UseAuth();

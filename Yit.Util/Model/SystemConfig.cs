@@ -58,5 +58,9 @@ namespace Yit.Util.Model
 
         public string CacheProvider { get; set; }
         public string RedisConnectionString { get; set; }
+        /// <summary>
+        /// 是否开启SignalR
+        /// </summary>
+        public bool IsSignalR { get; set; }
     }
 }

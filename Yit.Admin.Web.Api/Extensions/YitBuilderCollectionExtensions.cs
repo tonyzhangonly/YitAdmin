@@ -18,6 +18,7 @@ namespace Yit.Admin.Web.Api.Extensions
         public static void AddYitServiceProvider(this IServiceCollection services, IConfiguration configuration)
         {
             ICoreServiceBuilder serviceBuilder = new YitCoreServiceBuilder(services, configuration);
+            serviceBuilder.SetConfige();
             serviceBuilder.AddMvcExtensions();
             serviceBuilder.AddCache();
             serviceBuilder.AddAutoMapper();
@@ -39,6 +40,7 @@ namespace Yit.Admin.Web.Api.Extensions
             configurationBuilder.UseAuth();
             configurationBuilder.UseCors();
             configurationBuilder.UseOther();
+            configurationBuilder.AddSignalR();
         }
     }
 }

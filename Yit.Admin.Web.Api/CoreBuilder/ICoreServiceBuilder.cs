@@ -16,7 +16,14 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         /// 添加缓存
         /// </summary>
         void AddCache();
-
+        /// <summary>
+        /// 写入配置文件
+        /// </summary>
+        void SetConfige();
+        /// <summary>
+        /// 是否开启SignalR
+        /// </summary>
+        void AddSignalR();
         /// <summary>
         /// 全局错误拦截器配置
         /// </summary>

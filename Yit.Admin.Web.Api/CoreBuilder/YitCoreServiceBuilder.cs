@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Yit.Admin.Web.Api.Filter;
 using Yit.Admin.Web.Api.MappingLayer;
 using Yit.Util;
+using Yit.Util.Model;
 
 namespace Yit.Admin.Web.Api.CoreBuilder
 {
@@ -100,6 +101,22 @@ namespace Yit.Admin.Web.Api.CoreBuilder
         public void AddSwaggerGenerator()
         {
             throw new NotImplementedException();
+        }
+
+        public void SetConfige()
+        {
+            GlobalContextUtil.SystemConfig = _configuration.GetSection("SystemConfig").Get<SystemConfig>();
+        }
+
+        public void AddSignalR()
+        {
+            _services.AddSignalR(options =>
+            {
+                //客户端发保持连接请求到服务端最长间隔，默认30秒，改成4分钟，网页需跟着设置connection.keepAliveIntervalInMilliseconds = 12e4;即2分钟
+                options.ClientTimeoutInterval = TimeSpan.FromMinutes(4);
+                //服务端发保持连接请求到客户端间隔，默认15秒，改成2分钟，网页需跟着设置connection.serverTimeoutInMilliseconds = 24e4;即4分钟
+                options.KeepAliveInterval = TimeSpan.FromMinutes(2);
+            });
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Yit.Admin.Web.Api.AOP.Filter
     /// 用于数据模型验证
     /// </summary>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class,AllowMultiple = true,Inherited = true)]
-    public class ModelsValidateFilter : ActionFilterAttribute
+    public class ModelsValidateFilterAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuted(ActionExecutedContext context)
         {
